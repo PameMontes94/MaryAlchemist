@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5620463914351774374}
   - component: {fileID: 669425373096996891}
   - component: {fileID: 8115611241803548824}
+  - component: {fileID: 2606200629627747784}
   m_Layer: 0
   m_Name: Red chest
   m_TagString: Untagged
@@ -133,3 +134,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2606200629627747784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352448146579265057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0621d900e9cc4e649ba885cbb13432e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
