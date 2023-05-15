@@ -8,7 +8,7 @@ using UnityEngine.Rendering;
 public class Enemy : MonoBehaviour
 {
     public float velocity;
-    private float vida;
+    public float vida ;
     private Animator animator;
     // Update is called once per frame
     private void Start()

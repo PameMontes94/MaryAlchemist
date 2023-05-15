@@ -9,6 +9,9 @@ public class Attack_Character : MonoBehaviour
     public float radioGolpe;
     public float impactoGolpe;
 
+    private float tiempoEntreAtaque;
+    private float siguienteAtaque;
+
     private Animator  animator;
 
     private void Start()
@@ -18,9 +21,14 @@ public class Attack_Character : MonoBehaviour
 
     private void Update()
     {
+        if(siguienteAtaque > 0)
+        {
+            siguienteAtaque -= Time.deltaTime;
+        }
         if(Input.GetButtonDown("Atack"))
         {
             Golpe();
+            siguienteAtaque = tiempoEntreAtaque;
         }
     }
     private void Golpe()
