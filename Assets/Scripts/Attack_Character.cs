@@ -9,6 +9,13 @@ public class Attack_Character : MonoBehaviour
     public float radioGolpe;
     public float impactoGolpe;
 
+    private Animator  animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();    
+    }
+
     private void Update()
     {
         if(Input.GetButtonDown("Atack"))
@@ -18,6 +25,7 @@ public class Attack_Character : MonoBehaviour
     }
     private void Golpe()
     {
+        animator.SetTrigger("Golpe");
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controlGolpe.position, radioGolpe);
         foreach (Collider2D colisionador in objetos)
         {

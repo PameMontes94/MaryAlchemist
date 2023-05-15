@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +25,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //Move horizontal
         move = Input.GetAxis("Horizontal");
         rigid.velocity = new Vector2(move * speed, rigid.velocity.y);
@@ -40,8 +42,10 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Horizontal", Mathf.Abs(move));
     }
 
+
     void FixedUpdate()
     {
+
         //Salto
         if (Input.GetButtonDown("Jump")&& floor)
         {
