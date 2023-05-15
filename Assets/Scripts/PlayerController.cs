@@ -1,21 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     private float move;
     public float speed;
-    public bool floor = false;
+    public bool floor = true;
     public float force;
+    private bool mirandoDerecha = true;
 
     public Rigidbody2D rigid;
-    public GameObject shootPrefab;
-    public Transform shootSpawnPoint;
+    private Animator animator;
+    
     // Start is called before the first frame update
     void Start()
     {
-            
+        rigid = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();    
     }
 
     // Update is called once per frame
@@ -25,11 +28,16 @@ public class PlayerController : MonoBehaviour
         move = Input.GetAxis("Horizontal");
         rigid.velocity = new Vector2(move * speed, rigid.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (move > 0 && !mirandoDerecha)
         {
-            //Launch a wine bottle from the player
-            //Instantiate(shootPrefab, shootSpawnPoint.position, shootPrefab.transform.rotation);
+            Girar();
         }
+        else if (move < 0 && mirandoDerecha)
+        {
+            Girar();
+        }
+
+        animator.SetFloat("Horizontal", Mathf.Abs(move));
     }
 
     void FixedUpdate()
@@ -40,7 +48,14 @@ public class PlayerController : MonoBehaviour
             rigid.AddForce(Vector2.up * force, ForceMode2D.Impulse);
         }
     }
-
+    //Girar personaje
+    private void Girar()
+    {
+        mirandoDerecha = !mirandoDerecha;
+        Vector3 escala = transform.localScale;
+        escala.x *= -1;
+        transform.localScale = escala;
+    }
     //Validar si está tocando piso
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -55,5 +70,20 @@ public class PlayerController : MonoBehaviour
         {
             floor = false;
         }
+    }
+
+    //Destroy Player
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Obstacle"))
+        {
+            Muerte();
+        }
+    }
+    private void Muerte()
+    {
+        animator.SetTrigger("Muerte");
+
+        SceneManager.LoadScene(0);
     }
 }

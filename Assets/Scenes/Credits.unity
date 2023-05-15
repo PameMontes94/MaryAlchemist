@@ -2103,7 +2103,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: c00b20dcb3bd1a24891de6cba511c954, type: 3}
     m_FontSize: 11
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -2113,37 +2113,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'ASSETS
-
-    2D HAND PAINTED
-
-    2D MONSTERS PACK ANIMATED
-
-    CAVE PLATFORMER
-    TILESET
-
-    DARK UI
-
-    FREE MINERALS PIXEL ART ICONS
-
-    FREE PIXEL ART FOREST
-
-    GHOST_WITH_AXE
-
-    GOTHICVANIA
-    CEMETERY ARTWORK
-
-    JOHN FRAMER
-
-    PIXEL SKIES DEMO
-
-    SUNNYLAND HOUSE
-    PROPS EXPANSION PACK
-
-    WARRIOR FREE SET
-
-
-'
+  m_Text: "ASSETS\t\t\t\n2D HAND PAINTED\n2D MONSTERS PACK ANIMATED\nCAVE PLATFORMER
+    TILESET\nDARK UI\nFREE MINERALS PIXEL ART ICONS\nFREE PIXEL ART FOREST\nGHOST_WITH_AXE\nGOTHICVANIA
+    CEMETERY ARTWORK\nJOHN FRAMER\nPIXEL SKIES DEMO\nSUNNYLAND HOUSE PROPS EXPANSION
+    PACK\nWARRIOR FREE SET\n\n"
 --- !u!222 &944721249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2213,7 +2186,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: c00b20dcb3bd1a24891de6cba511c954, type: 3}
     m_FontSize: 20
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
