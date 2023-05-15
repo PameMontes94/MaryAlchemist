@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     //Destroy Player
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Obstacle"))
+        if (collision.CompareTag("Obstacle") || collision.CompareTag("Enemy"))
         {
             Muerte();
         }
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
     private void Muerte()
     {
         animator.SetTrigger("Muerte");
-
+        Destroy(gameObject);
         SceneManager.LoadScene(0);
     }
 }

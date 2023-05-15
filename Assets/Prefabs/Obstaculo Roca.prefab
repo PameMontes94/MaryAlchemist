@@ -458,7 +458,7 @@ GameObject:
   - component: {fileID: 6051056160653594222}
   m_Layer: 0
   m_Name: Obstaculo Roca
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

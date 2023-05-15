@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Attack_Character : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Transform controlGolpe;
+    public float radioGolpe;
+    public float impactoGolpe;
+
+    private void Update()
     {
-        
+        if(Input.GetButtonDown("Atack"))
+        {
+            Golpe();
+        }
+    }
+    private void Golpe()
+    {
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(controlGolpe.position, radioGolpe);
+        foreach (Collider2D colisionador in objetos)
+        {
+            if(colisionador.CompareTag("Enemy"))
+            {
+                colisionador.transform.GetComponent<Enemy>().tomarImpacto(impactoGolpe);
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDrawGizmos()
     {
-        
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(controlGolpe.position, radioGolpe);
     }
 }
