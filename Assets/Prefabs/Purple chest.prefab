@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4852175092981297088}
   - component: {fileID: 786185379944175413}
   - component: {fileID: -8080320572606240517}
+  - component: {fileID: 3483295556739740953}
   m_Layer: 0
   m_Name: Purple chest
   m_TagString: Untagged
@@ -133,3 +134,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3483295556739740953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2214695988767570321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5e64931452ca64d864b9267af352ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

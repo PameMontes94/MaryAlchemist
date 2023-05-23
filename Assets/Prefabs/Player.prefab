@@ -149,9 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7dd85cbe649c9043a4dc7031300d4dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 0
   floor: 0
-  force: 10
+  force: 9
   rigid: {fileID: 6012947377860735301}
 --- !u!50 &6012947377860735301
 Rigidbody2D:
@@ -208,7 +208,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07669379, y: -0.044832647}
+  m_Offset: {x: -0.07669379, y: -0.03669086}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -219,7 +219,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19332248, y: 0.3503347}
+  m_Size: {x: 0.19332248, y: 0.33405113}
   m_EdgeRadius: 0
 --- !u!114 &6056674598442563099
 MonoBehaviour:
@@ -235,4 +235,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controlGolpe: {fileID: 2348245355878762442}
   radioGolpe: 1
-  impactoGolpe: 0
+  impactoGolpe: 1

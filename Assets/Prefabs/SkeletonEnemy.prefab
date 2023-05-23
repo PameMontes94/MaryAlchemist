@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
+  vida: 1
 --- !u!212 &8820968972300758701
 SpriteRenderer:
   m_ObjectHideFlags: 0

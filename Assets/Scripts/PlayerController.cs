@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private float move;
     public float speed;
-    public bool floor = true;
+    public bool floor;
     public float force;
     private bool mirandoDerecha = true;
 
@@ -47,19 +47,12 @@ public class PlayerController : MonoBehaviour
     {
 
         //Salto
-        if (Input.GetButtonDown("Jump")&& floor)
+        if (Input.GetButtonDown("Jump") && floor)
         {
             rigid.AddForce(Vector2.up * force, ForceMode2D.Impulse);
         }
     }
-    //Girar personaje
-    private void Girar()
-    {
-        mirandoDerecha = !mirandoDerecha;
-        Vector3 escala = transform.localScale;
-        escala.x *= -1;
-        transform.localScale = escala;
-    }
+    
     //Validar si está tocando piso
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -76,6 +69,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //Girar personaje
+    private void Girar()
+    {
+        mirandoDerecha = !mirandoDerecha;
+        Vector3 escala = transform.localScale;
+        escala.x *= -1;
+        transform.localScale = escala;
+    }
+
     //Destroy Player
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -87,7 +89,7 @@ public class PlayerController : MonoBehaviour
     private void Muerte()
     {
         animator.SetTrigger("Muerte");
-        Destroy(gameObject);
+       // Destroy(gameObject);
         SceneManager.LoadScene(0);
     }
 }
